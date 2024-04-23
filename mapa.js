@@ -41,7 +41,7 @@ var minimap = new L.Control.MiniMap(carto_light,
 
  
  
-  L.marker([3.59021000,-76.48606167], {icon: greenIcon}).addTo(map);
+  L.marker([3.59021000,-76.48606167], {icon: 'tren.png'}).addTo(map);
 
   L.marker([3.58250244,-76.49303176], {icon: greenIcon}).addTo(map);
   
