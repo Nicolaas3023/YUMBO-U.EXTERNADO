@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geo.Helena</title>
+	 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   		crossorigin=""/>		
+	<link rel="stylesheet" type="text/css" href="mapa.css"/>	
+    <link rel="stylesheet" type="text/css" href="Leaflet-MiniMap-master/dist/Control.MiniMap.min.css">
+	
+	
+	<h1>LANDSCAPE OF THE SPATIAL DEVELOPMENT OF YUMBO, VALLE DEL CAUCA</h1>
+	<select name="select-location" id="select-location"> 
+		
+		<option value="-1">Seleccione un lugar:</option>
+		<option value="03.59021000,-76.48606167">Algodonales en los 70</option>
+		<option value="03.58250244,-76.49303176">Almacén el Dolarazo</option>	
+		<option value="03.58432797,-76.48743156">Antigua estación del Ferrocarril del Pacífico</option>
+		<option value="03.57905128, -76.49623506">Barrio</option>
+		<option value="03.59021000, -76.48606167">Barrio Guacandá</option>
+		<option value="03.58255384, -76.48729603">Busqueda de pinturas</option>
+		<option value="03.56691333, -76.48423500">Cartón para reciclar</option>
+
+		<option value="03.58271710, -76.48987482">Casa Líderes Comunales</option>
+		<option value="03.63593766, -76.48443268">Ceiba de 200 años</option>
+		<option value="03.57029667, -76.48336667">Celanese</option>
+		<option value="03.56345000, -76.48978833">Cementos del Valle</option>
+		<option value="03.55085500, -76.50274833">CENCAR</option>
+		<option value="03.63545960, -76.48379605">Centro histórico y cultural de Mulaló</option>		
+		<option value="03.63766655, -76.47763489">Cerro extracción</option>
+		<option value="03.53962667, -76.49227667">Cervecería del Valle</option>
+		<option value="03.55692500, -76.50044667">Ciudad Guabinas</option>
+		<option value="03.57820833, -76.48632833">Combustibles</option>
+		<option value="03.58226500, -76.49049500">Construcción de un piso</option>
+		<option value="03.58312500, -76.49670667">Cuadra con afiches políticos</option>
+		<option value="03.62955587, -76.47057605">Desvío por gasoducto dañado</option>
+		<option value="03.58527333, -76.48790167">Dispapeles</option>
+		<option value="03.57592500, -76.48006500">Elefante blanco</option>
+		<option value="03.54269500, -76.49121000">Estación de gasolina Primax</option>
+		<option value="03.54903940, -76.49039843">Estación Petromil</option>
+		<option value="03.58513879, -76.49244487">Galería de Yumbo</option>
+		<option value="03.56203534, -76.49550466">Good Year</option>
+		<option value="03.57159000, -76.48039167">Iglesia la Estancia</option>
+		<option value="03.63706919, -76.48472808">La Cruz de las misiones en Mulaló</option>
+		<option value="03.58192000, -76.48835167">Lote pequeña industria</option>
+		<option value="03.58369333, -76.49388500">Lugar de residencia</option>
+		<option value="03.66269031, -76.52591703">Museo Arqueológico de Montañitas Yumbo</option>
+		<option value="03.59013500, -76.48706500">Obelisco Ciudadela Carlos Pizarro León Gómez</option>
+		<option value="03.57526584, -76.48572113">Obra Pública municipal nueva</option>
+		<option value="03.57515167, -76.47933333">Olor típico de Yumbo</option>
+		<option value="03.58435059, -76.48759460">Parada del tren</option>
+		<option value="03.57079500, -76.48017500">Parque barrial la Estancia</option>
+		<option value="03.58337755, -76.48927730">Parque Bolívar</option>
+		<option value="03.53947094, -76.49453042">Parque Industrial Arroyohondo</option>
+		<option value="03.58531578, -76.49541586">Parque Lineal nuevo</option>
+		<option value="03.55331014, -76.49054167">Parqueadero de mulas</option>
+		<option value="03.57887111, -76.49193493">Parroquia Cristo Obrero</option>
+		<option value="03.58836667, -76.49980333">Parroquia Nuestra Señora de la Alegría</option>
+		<option value="03.57159000, -76.48039167">Parroquia Nuestra Señora de los dolores</option>
+		<option value="03.58367000, -76.48917833">Parroquia San Antonio</option>
+		<option value="03.59269707, -76.48592943">Parroquia San Sebastián Martir</option>
+		<option value="03.54588333, -76.49215167">Patios actuales</option>
+		<option value="03.58468167, -76.48501833">Pinturas Borne</option>
+		<option value="03.55830500, -76.49971333">Planta eléctrica</option>
+		<option value="03.58832551, -76.49980012">Primera piedra Virgen de la Alegría</option>
+		<option value="03.54673428, -76.49302714">Propiedad privada</option>
+		<option value="03.64856999, -76.49580740">Punto medio Mulaló a Montañitas</option>
+		<option value="03.54031667, -76.49211000">Radar de velocidad</option>
+		<option value="03.58601689, -76.48669204">Río Yumbo</option>
+		<option value="03.57054333, -76.48121333">Ruta de buses</option>
+		<option value="03.58722000, -76.50843333">Secretaría de Ambiente de Yumbo</option>
+		<option value="03.55222833, -76.49015500">Serviteca</option>
+		<option value="03.58303000, -76.49522833">Supermercado Belalcazar</option>
+		<option value="03.54584667, -76.49183333">Tubería Gasoducto</option>
+		<option value="03.58673167, -76.49686833">Universidad del Valle sede Yumbo</option>
+		<option value="03.56307667, -76.49239833">Venta de pólvora</option>
+		<option value="03.56880167, -76.48509333">Zona de protección demarcada en el mapa</option>
+				
+	</select>
+	<div id="map"></div>
+
+</head>
+<body>	
+
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   		crossorigin=""
+		></script>   
+
+		<script src="Leaflet-MiniMap-master/dist/Control.MiniMap.min.js"></script>    
+	
+		
+	<script src="mapa.js"></script>
+
+	
+</body>
+</html
