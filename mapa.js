@@ -33,7 +33,9 @@ var minimap = new L.Control.MiniMap(carto_light,
 
 
     var greenIcon = L.icon({
-      iconUrl: 'tren.png',
+      iconUrl: <img src="tren.png" />
+
+,
       iconSize:     [50, 50], // size of the icon
       iconAnchor:   [85, 100], // point of the icon which will correspond to marker's location
       popupAnchor:  [85, 100] // point from which the popup should open relative to the iconAnchor
