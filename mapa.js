@@ -173,7 +173,7 @@ var minimap = new L.Control.MiniMap(carto_light,
 
 
 
- var imageUrl = 'YUMBO.png',
+ var imageUrl = '',
     imageBounds = [[3.5975,-76.5037], [3.5725,-76.4872]];
 L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
